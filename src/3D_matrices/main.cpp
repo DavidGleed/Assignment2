@@ -417,6 +417,7 @@ void initializeProgram()
 	projectionMatrixLocation = glGetUniformLocation(theProgram, "projectionMatrix");
 
 	translationVectorLocation = glGetUniformLocation(theProgram, "Pos1");
+	translationVectorLocation = glGetUniformLocation(theProgram, "Pos2");
 	translationVectorLocation = glGetUniformLocation(theProgram, "ballPos");
 
 	//only generates runtime code in debug mode
