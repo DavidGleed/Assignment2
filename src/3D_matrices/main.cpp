@@ -69,12 +69,12 @@ std::string loadShader(const string filePath) {
 
 //our variables
 bool done = false;
-<<<<<<< HEAD
+
 GLfloat PaddleXZ = 0.1f;
 GLfloat PaddleY = 1.0f;
-=======
+
 GLfloat PaddleXY = 0.1f;
->>>>>>> 9a8a2c268921f9404ddba8844d420cd3e6000aff
+
 GLfloat BallXYZ = 0.1f;
 // tag::vertexData[]
 //the data about our geometry
@@ -84,7 +84,7 @@ const GLfloat PaddleData[] = {
 	//	 X      Y      Z	  R     G     B      A
 
 	// bottom
-<<<<<<< HEAD
+
 	-PaddleXZ,-PaddleY,-PaddleXZ,   0.0f, 1.0f, 0.0f,  1.0f,
 	PaddleXZ,-PaddleY,-PaddleXZ,   0.0f, 1.0f, 0.0f,  1.0f,
 	-PaddleXZ,-PaddleY, PaddleXZ,   0.0f, 1.0f, 0.0f,  1.0f,
@@ -131,7 +131,7 @@ const GLfloat PaddleData[] = {
 	PaddleXZ,-PaddleY,	 PaddleXZ,   0.0f, 1.0f, 0.0f,  1.0f,
 	PaddleXZ, PaddleY,	-PaddleXZ,   0.0f, 1.0f, 0.0f,  1.0f,
 	PaddleXZ, PaddleY,	 PaddleXZ,   0.0f, 1.0f, 0.0f,  1.0f,
-=======
+
 	-PaddleXY,-PaddleXY,-1.0f,   0.0f, 1.0f, 0.0f,  1.0f,
 	PaddleXY,-PaddleXY,-1.0f,   0.0f, 1.0f, 0.0f,  1.0f,
 	-PaddleXY,-PaddleXY, 1.0f,   0.0f, 1.0f, 0.0f,  1.0f,
@@ -178,7 +178,7 @@ const GLfloat PaddleData[] = {
 	PaddleXY,-PaddleXY,	 1.0f,   0.0f, 1.0f, 0.0f,  1.0f,
 	PaddleXY, PaddleXY,	-1.0f,   0.0f, 1.0f, 0.0f,  1.0f,
 	PaddleXY, PaddleXY,	 1.0f,   0.0f, 1.0f, 0.0f,  1.0f,
->>>>>>> 9a8a2c268921f9404ddba8844d420cd3e6000aff
+
 };
 // end::vertexData[]
 
@@ -194,7 +194,7 @@ const GLfloat BallData[] = {
 	-BallXYZ,-BallXYZ, BallXYZ,   0.0f, 1.0f, 0.0f,  1.0f,
 
 	// top
-<<<<<<< HEAD
+
 	-BallXYZ, BallXYZ,-BallXYZ,   0.0f, 0.0f, 0.0f,  1.0f,
 	-BallXYZ, BallXYZ, BallXYZ,   0.0f, 0.0f, 0.0f,  1.0f,
 	BallXYZ, BallXYZ,-BallXYZ,   0.0f, 0.0f, 0.0f,  1.0f,
@@ -209,7 +209,7 @@ const GLfloat BallData[] = {
 	BallXYZ,-BallXYZ, BallXYZ,   1.0f, 1.0f, 1.0f,  1.0f,
 	BallXYZ, BallXYZ, BallXYZ,   1.0f, 1.0f, 1.0f,  1.0f,
 	-BallXYZ, BallXYZ, BallXYZ,   1.0f, 1.0f, 1.0f,  1.0f,
-=======
+
 	-BallXYZ, BallXYZ,-BallXYZ,   0.0f, 0.0f, 1.0f,  1.0f,
 	-BallXYZ, BallXYZ, BallXYZ,   0.0f, 0.0f, 1.0f,  1.0f,
 	BallXYZ, BallXYZ,-BallXYZ,   0.0f, 0.0f, 1.0f,  1.0f,
@@ -224,7 +224,7 @@ const GLfloat BallData[] = {
 	BallXYZ,-BallXYZ, BallXYZ,   0.0f, 1.0f, 0.0f,  1.0f,
 	BallXYZ, BallXYZ, BallXYZ,   0.0f, 1.0f, 0.0f,  1.0f,
 	-BallXYZ, BallXYZ, BallXYZ,   0.0f, 1.0f, 0.0f,  1.0f,
->>>>>>> 9a8a2c268921f9404ddba8844d420cd3e6000aff
+
 
 	// back
 	-BallXYZ,-BallXYZ,-BallXYZ,   0.0f, 1.0f, 0.0f,  1.0f,
@@ -253,7 +253,7 @@ const GLfloat BallData[] = {
 
 // tag::gameState[]
 //the translation vector we'll pass to our GLSL program
-<<<<<<< HEAD
+
 //glm::vec3 position1 = {-1.4f, 0.0f, 0.0f};
 //glm::vec3 velocity1 = { 0.0f, 0.5f, 0.0f};
 //
@@ -276,7 +276,7 @@ GLfloat Vel2[] = { 0.0f, -0.3f };
 
 GLfloat ballPos[] = { 0.0f, 0.0f };
 GLfloat ballVel[] = { -0.4f, 0.3f };
-=======
+
 glm::vec3 position1 = {-1.4f, 0.0f, 0.0f};
 glm::vec3 velocity1 = { 0.0f, 0.0f, 0.5f};
 
@@ -285,7 +285,7 @@ glm::vec3 velocity2 = { 0.0f, 0.0f,-0.5f};
 
 glm::vec3 ballPosition = { 0.0f, 0.0f, 0.0f };
 glm::vec3 ballVelocity = { 0.0f, 0.0f, 0.0f };
->>>>>>> 9a8a2c268921f9404ddba8844d420cd3e6000aff
+
 // end::gameState[]
 
 // tag::GLVariables[]
@@ -622,8 +622,8 @@ void handleInput()
 				switch (event.key.keysym.sym)
 				{
 					//hit escape to exit
-<<<<<<< HEAD
-					case SDLK_ESCAPE: done = true;
+
+					//case SDLK_ESCAPE: done = true;
 					//	// use "a" and "d" to invert Paddle velocity
 					//case SDLK_a: velocity1 *= -1.0f;
 					//	break;
@@ -631,19 +631,13 @@ void handleInput()
 					//	break;
 
 
-					// use "a" and "d" to invert Paddle velocity
-					case SDLK_a: Vel1[1] *= -1.0f;
-						break;
-					case SDLK_d: Vel2[1] *= -1.0f;
-						break;
-=======
 				case SDLK_ESCAPE: done = true;
 					// use "a" and "d" to invert Paddle velocity
 				case SDLK_a: velocity1 *= -1.0f;
 					break;
 				case SDLK_d: velocity2 *= -1.0f;
 					break;
->>>>>>> 9a8a2c268921f9404ddba8844d420cd3e6000aff
+
 				}
 			break;
 		}
@@ -659,7 +653,7 @@ void updateSimulation(double simLength = 0.02) //update simulation with an amoun
 
 	/*position1 += float(simLength) * velocity1;
 	position2 += float(simLength) * velocity2;
-<<<<<<< HEAD
+
 	ballPosition += float(simLength) * ballVelocity;*/
 
 
@@ -679,7 +673,7 @@ void updateSimulation(double simLength = 0.02) //update simulation with an amoun
 		//reverse velocity on the collision axis, assuming X
 		Vel1[1] *= -1;
 	}
-=======
+
 	ballPosition += float(simLength) * ballVelocity;
 	
 	/*const glm::vec3 topPosition = { -1.4f, 0.0f, 1.0f };
@@ -688,7 +682,7 @@ void updateSimulation(double simLength = 0.02) //update simulation with an amoun
 	{
 		velocity1 *= -1.0f;
 	}*/
->>>>>>> 9a8a2c268921f9404ddba8844d420cd3e6000aff
+
 }
 // end::updateSimulation[]
 
@@ -712,11 +706,9 @@ void render()
 
 	
 	glm::mat4 modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0, 0.0, -1.0));
-<<<<<<< HEAD
 	glm::mat4 view = glm::lookAt(glm::vec3(0.0, 0.0, 3.0), glm::vec3(0.0, 0.0, 0.0), glm::vec3(0.0, 1.0, 0.0));
-=======
 	glm::mat4 view = glm::lookAt(glm::vec3(0.0, 3.0, 1.0), glm::vec3(0.0, -3.0, -1.0), glm::vec3(0.0, 1.0, 0.0));
->>>>>>> 9a8a2c268921f9404ddba8844d420cd3e6000aff
+
 	glm::mat4 projection = glm::perspective(45.0f, 1.0f*600 / 600, 0.1f, 10.0f);
 
 
@@ -725,30 +717,30 @@ void render()
 	
 	//set viewMatrix - how we control the view (viewpoint, view direction, etc)
 	glUniformMatrix4fv(viewMatrixLocation, 1, false, glm::value_ptr(view));
-<<<<<<< HEAD
+
 	
 
 	modelMatrix = glm::translate(glm::mat4(1.0f), Pos1);	
-=======
+
 
 	modelMatrix = glm::translate(glm::mat4(1.0f), position1);	
->>>>>>> 9a8a2c268921f9404ddba8844d420cd3e6000aff
+
 	glUniformMatrix4fv(modelMatrixLocation, 1, false, glm::value_ptr(modelMatrix));
 
 glUniform2f(translationVectorLocation, Pos1[0], Pos1[1]);
 	glDrawArrays(GL_TRIANGLES, 0, 6 * 2 * 3);
 
 
-<<<<<<< HEAD
+
 	modelMatrix = glm::translate(glm::mat4(1.0f), Pos2);
 	glUniformMatrix4fv(modelMatrixLocation, 1, false, glm::value_ptr(modelMatrix));
 
 	glUniform2f(translationVectorLocation, Pos2[0], Pos2[1]);
-=======
+
 	modelMatrix = glm::translate(glm::mat4(1.0f), position2);
 	glUniformMatrix4fv(modelMatrixLocation, 1, false, glm::value_ptr(modelMatrix));
 
->>>>>>> 9a8a2c268921f9404ddba8844d420cd3e6000aff
+
 	glDrawArrays(GL_TRIANGLES, 0, 6 * 2 * 3);
 
 
@@ -758,13 +750,12 @@ glUniform2f(translationVectorLocation, Pos1[0], Pos1[1]);
 	modelMatrix = glm::translate(glm::mat4(1.0f), ballPosition);
 	glUniformMatrix4fv(modelMatrixLocation, 1, false, glm::value_ptr(modelMatrix));
 
-<<<<<<< HEAD
 	modelMatrix = glm::translate(glm::mat4(1.0f), ballPos);
 	glUniformMatrix4fv(modelMatrixLocation, 1, false, glm::value_ptr(modelMatrix));
 
 	glUniform2f(translationVectorLocation, ballPos[0], ballPos[1]);
-=======
->>>>>>> 9a8a2c268921f9404ddba8844d420cd3e6000aff
+
+
 	glDrawArrays(GL_TRIANGLES, 0, 6 * 2 * 3);
 
 
